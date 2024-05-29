@@ -1,0 +1,21 @@
+教本の演習問題文
+
+SELECTS
+	title
+	publish
+FROM
+	books
+:
+
+間違い内容
+・列名の間に(,)カンマがない。
+・SELECTではなくSELECTS(Sはいらない)になっている。
+
+修正後
+
+SELECT
+	title,
+	publish
+FROM
+	books
+;

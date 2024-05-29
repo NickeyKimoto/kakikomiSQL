@@ -1,0 +1,20 @@
+教本の演習問題文
+
+SELECT ALL
+	class,
+	depart_id
+FROM
+	employee
+;
+
+間違い内容
+・重複させないにもかかわらずALLキーワードになっている。
+・役職(class)のみを取り出すのにdepart_idまで取り出している。
+
+修正後
+
+SELECT DISTINCT
+	class
+FROM
+	employee
+;
