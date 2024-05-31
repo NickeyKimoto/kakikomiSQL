@@ -1,0 +1,14 @@
+SELECT
+	b.title,
+	COUNT(r.isbn) AS 貸出累計数
+FROM
+	books AS b
+LEFT JOIN
+	rental AS r
+ON
+	b.isbn = r.isbn
+GROUP BY
+	r.isbn
+ORDER BY
+	COUNT(r.isbn) DESC
+;
