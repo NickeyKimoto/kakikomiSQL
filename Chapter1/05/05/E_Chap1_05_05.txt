@@ -1,0 +1,23 @@
+教本の演習問題文
+
+SELECT
+	title,
+FROM
+	books
+WHERE
+	publish LIKE '_社'
+;
+
+間違い内容
+・カラムを一つだけ取り出すのにカンマで区切られている。
+・0文字以上の文字列を取り出す必要があるのにワイルドカードが(_)になっている。
+
+修正後
+
+SELECT
+	title
+FROM
+	books
+WHERE
+	publish LIKE '%社'
+;

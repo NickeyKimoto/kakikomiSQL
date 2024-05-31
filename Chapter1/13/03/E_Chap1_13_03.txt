@@ -1,0 +1,20 @@
+SELECT
+	referer AS リンク元,
+	COUNT(*) AS アクセス数,
+	CASE
+		/*50はランクAの範囲の最低値*/
+		WHEN COUNT(*) >= 50 THEN 'A'
+		/*10はランクBの範囲の最低値*/
+		WHEN COUNT(*) >= 10 THEN 'B'
+		ELSE 'C'
+	END AS ランク
+FROM
+	access_log
+GROUP BY
+	referer
+HAVING
+	/*3はアクセス数の出力の条件範囲の最低値*/
+	COUNT(*) >= 3
+ORDER BY
+	COUNT(*) DESC
+;

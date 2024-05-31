@@ -1,0 +1,13 @@
+SELECT
+	sh.s_name,
+	sl.s_date,
+	sl.s_value
+FROM
+	shop AS sh
+INNER JOIN
+	sales AS sl
+ON
+	sh.s_id = sl.s_id
+ORDER BY
+	sl.s_value ASC
+;

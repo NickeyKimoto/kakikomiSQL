@@ -1,0 +1,28 @@
+教本の演習問題文
+
+SELECT
+	title
+	publish
+	price
+FROM
+	books
+WHERE
+	price <= 5000
+;
+
+間違い内容
+・価格が5000未満であるにもかかわらず条件式が<=になっている。
+・カラムを複数取り出すのにカンマで区切られていない。
+
+修正後
+
+SELECT
+	title,
+	publish,
+	price
+FROM
+	books
+WHERE
+	#5000は価格の条件範囲の基準値
+	price < 5000
+;

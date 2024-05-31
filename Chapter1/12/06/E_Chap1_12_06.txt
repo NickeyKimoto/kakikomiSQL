@@ -1,0 +1,15 @@
+SELECT
+	referer,
+	COUNT(*)
+FROM
+	access_log
+WHERE
+	access_date > '2013-01-01'
+GROUP BY
+	referer
+HAVING
+	#5はアクセス数の条件範囲の基準値
+	COUNT(*) <= 5
+ORDER BY
+	COUNT(*) DESC
+;

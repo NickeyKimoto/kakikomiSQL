@@ -1,0 +1,30 @@
+教本の演習問題文
+
+SELECT
+	prefecture,
+	sex,
+	age,
+	AVG(answer1) IS 評価平均
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;
+
+間違い内容
+・表示する列に年齢の記載がないのにageも入っている。
+・別名にするキーワードはASなのにISになっている。
+
+修正後
+
+SELECT
+	prefecture,
+	sex,
+	AVG(answer1) AS 評価平均
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;

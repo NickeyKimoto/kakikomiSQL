@@ -1,0 +1,9 @@
+SELECT
+	user_id,
+	isbn
+FROM
+	rental
+WHERE
+	#0は貸し出し中を表す定数
+	returned = 0
+;

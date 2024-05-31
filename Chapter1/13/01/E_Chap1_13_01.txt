@@ -1,0 +1,16 @@
+SELECT
+	name AS 氏名,
+	CASE
+		/*3はためになったことを表す定数*/
+		WHEN answer1 = 3 THEN 'ためになった'
+		/*2は普通を表す定数*/
+		WHEN answer1 = 2 THEN '普通'
+		/*1は役に立たないことを表す定数*/
+		WHEN answer1 = 1 THEN '役に立たない'
+	END AS 評価,
+	answer2 AS 感想
+FROM
+	quest
+ORDER BY
+	answered DESC
+;

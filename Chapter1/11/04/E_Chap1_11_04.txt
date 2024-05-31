@@ -1,0 +1,9 @@
+SELECT
+	publish,
+	#0は切り捨てる小数点以下の桁数
+	ROUND(AVG(price), 0)
+FROM
+	books
+GROUP BY
+	publish
+;

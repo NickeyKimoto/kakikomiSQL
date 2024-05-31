@@ -1,0 +1,24 @@
+教本の演習問題文
+
+SELECT
+	page_id,
+	SUM(*)
+FROM
+	access_log
+ORDER BY
+	page_id
+;
+
+間違い内容
+・アクセス数を計測したいのに集計関数が不適当。
+・グループ化するのにORDER BY句になっている。
+修正後
+
+SELECT
+	page_id,
+	COUNT(*)
+FROM
+	access_log
+GROUP BY
+	page_id
+;

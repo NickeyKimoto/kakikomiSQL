@@ -1,0 +1,11 @@
+SELECT
+	author_id,
+	COUNT(*) AS 書籍数
+FROM
+	author_books
+GROUP BY
+	author_id
+HAVING
+	#3は書籍数の条件範囲の基準値
+	COUNT(*) >= 3
+;

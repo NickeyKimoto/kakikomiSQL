@@ -1,0 +1,29 @@
+教本の演習問題文
+
+SELECT
+	depart_id,
+	class,
+	CONCAT('l_name', 'f_name') AS 氏名
+FROM
+	employee
+ORDER BY
+	depart_id,
+	class DESC
+;
+
+間違い内容
+・氏名を表示したいのに文字列結合で'で囲んでいるので表示されない。
+・部署も降順ソートしたいのにキーワードがないため昇順になってしまう。
+
+修正後
+
+SELECT
+	depart_id,
+	class,
+	CONCAT(l_name, f_name) AS 氏名
+FROM
+	employee
+ORDER BY
+	depart_id DESC,
+	class DESC
+;

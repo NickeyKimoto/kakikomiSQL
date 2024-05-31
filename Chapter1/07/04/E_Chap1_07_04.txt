@@ -1,0 +1,28 @@
+教本の演習問題文
+
+SELECT
+	*
+FROM
+	access_log
+WHERE
+	access_date IN ('2013-01-01', '2013-01-31')
+ORDER BY
+	referer, ip_address DESC
+;
+
+間違い内容
+・日付の条件が「一月分」であるにもかかわらず1日と31日のものだけを取得する(IN)ようになっている。
+・refererも降順にするべきなのにソート指定がなく昇順になってしまっている。
+
+修正後
+
+SELECT
+	*
+FROM
+	access_log
+WHERE
+	access_date BETWEEN '2013-01-01' AND '2013-01-31'
+ORDER BY
+	referer DESC,
+	ip_address DESC
+;

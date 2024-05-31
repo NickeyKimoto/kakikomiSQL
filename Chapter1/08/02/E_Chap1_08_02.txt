@@ -1,0 +1,13 @@
+SELECT
+	name,
+	answer1,
+	answer2
+FROM
+	quest
+ORDER BY
+	answered DESC
+LIMIT
+	#0は指定行数の開始行
+	#10は指定行数の取得行数
+	0, 10
+;

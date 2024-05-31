@@ -1,0 +1,12 @@
+SELECT
+	title,
+	price
+FROM
+	books
+WHERE
+	#2500は値段の条件範囲の最小値
+	#3500は値段の条件範囲の最大値
+	price BETWEEN 2500 AND 3500
+ORDER BY
+	price ASC
+;

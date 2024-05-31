@@ -1,0 +1,16 @@
+SELECT
+	CONCAT(u.l_name, u.f_name) AS ユーザ氏名,
+	COUNT(returned) AS 貸出数
+FROM
+	rental AS r
+INNER JOIN
+	usr AS u
+ON
+	r.user_id = u.user_id
+WHERE
+	returned = 0 
+GROUP BY
+	CONCAT(u.l_name, u.f_name)
+ORDER BY
+	COUNT(returned) DESC
+;

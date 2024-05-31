@@ -1,0 +1,11 @@
+SELECT
+	name,
+	sex,
+	prefecture
+FROM
+	quest
+WHERE
+	#30は年齢の条件範囲の最小値
+	#39は年齢の条件範囲の最大値
+	age BETWEEN 30 AND 39
+;

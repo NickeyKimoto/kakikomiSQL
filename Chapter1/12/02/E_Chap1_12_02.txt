@@ -1,0 +1,13 @@
+SELECT
+	prefecture,
+	MAX(age)
+FROM
+	quest
+WHERE
+	sex = '男'
+GROUP BY
+	prefecture
+HAVING
+	#60は年齢の条件範囲の基準値
+	MAX(age) > 60
+;

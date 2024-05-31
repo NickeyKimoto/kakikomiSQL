@@ -1,0 +1,12 @@
+SELECT
+	prefecture,
+	AVG(age)
+FROM
+	quest
+GROUP BY
+	prefecture
+HAVING
+	#35は年齢の条件範囲の最小値
+	#49は年齢の条件範囲の最大値
+	AVG(age) BETWEEN 35 AND 49
+;

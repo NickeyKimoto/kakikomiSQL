@@ -1,0 +1,37 @@
+教本の演習問題文
+
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+		publish = '秀和システム'
+	AND
+		publish = '日経BP'
+	OR
+		price < 3000
+;
+
+間違い内容
+・出版社の条件が「または」であるにもかかわらず論理演算子がANDとなっている。
+また、出版社と価格の条件が「かつ」であるにもかかわらず論理演算子がORとなっている。
+・ORよりもANDを優先して解釈されてしまうのに、ORを使うべき箇所がカッコで括られていない。
+
+修正後
+
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+		(
+			publish = '秀和システム'
+		OR
+			publish = '日経BP'
+		)
+	AND
+		#3000は値段の条件範囲の基準値
+		price < 3000
+;

@@ -1,0 +1,13 @@
+SELECT
+	publish,
+	category_id,
+	COUNT(*) AS 登録数
+FROM
+	books
+GROUP BY
+	publish,
+	category_id
+HAVING
+	#3は登録数の条件範囲の基準値
+	COUNT(*) < 3
+;

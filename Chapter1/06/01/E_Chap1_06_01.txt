@@ -1,0 +1,11 @@
+SELECT
+	*
+FROM
+	quest
+WHERE
+		sex = '女'
+	AND
+		#20は年齢の条件範囲の最小値
+		#29は年齢の条件範囲の最大値
+		age BETWEEN 20 AND 29
+;

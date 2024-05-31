@@ -1,0 +1,12 @@
+SELECT
+	title,
+	publish_date
+FROM
+	books
+ORDER BY
+	publish_date DESC
+LIMIT
+	#2は指定行数の開始行
+	#5は指定行数の取得行数
+	2, 5
+;

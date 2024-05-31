@@ -1,0 +1,32 @@
+教本の演習問題文
+
+SELECT
+	page_id,
+	referer,
+	ip_address
+FROM
+	access_log
+ORDER BY
+	access_date ASC
+LIMIT
+	10, 0
+;
+
+間違い内容
+・アクセス日時が古い順になっている。
+・開始行と取得行数の記載が反対になっている
+修正後
+
+SELECT
+	page_id,
+	referer,
+	ip_address
+FROM
+	access_log
+ORDER BY
+	access_date DESC
+LIMIT
+	#0は取得する行の開始行
+	#10は取得する行の行数
+	0, 10
+;

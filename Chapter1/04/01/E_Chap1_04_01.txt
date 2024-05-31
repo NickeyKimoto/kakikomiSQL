@@ -1,0 +1,9 @@
+SELECT
+	answer1,
+	answer2
+FROM
+	quest
+WHERE
+	#20は年齢の条件基準値
+	age >= 20
+;
