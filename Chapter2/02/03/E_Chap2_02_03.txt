@@ -8,7 +8,7 @@ LEFT JOIN
 ON
 	b.isbn = r.isbn
 GROUP BY
-	r.isbn
+	b.isbn
 ORDER BY
 	COUNT(r.isbn) DESC
 ;
