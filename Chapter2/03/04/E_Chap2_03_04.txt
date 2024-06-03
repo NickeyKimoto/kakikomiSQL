@@ -1,0 +1,32 @@
+教本の演習問題文
+
+SELECT
+	cp.c_id AS 前のページ,
+	cn.c_id AS 現在のページ
+FROM
+	contents AS cp
+OUTER JOIN
+	contents AS cn
+ON
+	cp.next_id <> cn.c_id
+ORDER BY
+	cn.c_id ASC
+;
+
+間違い内容
+・INNER JOINではなくOUTER JOINとなっている。
+・結合するキーの式が=ではなく<>となっている。
+修正後
+
+SELECT
+	cp.c_id AS 前のページ,
+	cn.c_id AS 現在のページ
+FROM
+	contents AS cp
+INNER JOIN
+	contents AS cn
+ON
+	cp.next_id = cn.c_id
+ORDER BY
+	cn.c_id ASC
+;

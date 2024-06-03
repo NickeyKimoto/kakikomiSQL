@@ -1,0 +1,12 @@
+SELECT
+	CONCAT(ec.l_name, ec.f_name) AS 社員氏名,
+	CONCAT(en.l_name, en.f_name) AS 上司氏名
+FROM
+	employee AS ec
+LEFT JOIN
+	employee AS en
+ON
+	ec.b_id = en.s_id
+ORDER BY
+	ec.s_id ASC
+;
