@@ -1,0 +1,35 @@
+演習問題SQL命令
+
+	SELECT
+		a.name_kana
+	FROM
+		author AS a
+UNION ALL
+	SELECT
+		u.l_name_kana,
+		u.f_name_kana
+	FROM
+		usr AS u
+ORDER BY
+	1 DESC
+;
+
+間違い
+・usrテーブルのカナ氏名が文字列結合されていない
+・重複を含まない条件であるにも関わらず、UNION ALLとなっている。
+
+修正後
+
+	SELECT
+		a.name_kana
+	FROM
+		author AS a
+UNION
+	SELECT
+		CONCAT(u.l_name_kana, u.f_name_kana)
+	FROM
+		usr AS u
+ORDER BY
+	/*1はソートする指定列番号*/
+	1 DESC
+;

@@ -1,0 +1,13 @@
+SELECT
+	CONCAT(l_name, f_name) AS ユーザ氏名
+FROM
+	usr
+WHERE
+	user_id NOT IN
+		(
+			SELECT
+				user_id
+			FROM
+				rental
+		)
+;
