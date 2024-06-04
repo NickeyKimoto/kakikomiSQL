@@ -1,0 +1,27 @@
+演習問題SQL命令
+
+INSERT
+	product
+VALUES
+	(
+		SB00000001,
+		黒スタンプ,
+		1250
+	)
+;
+
+間違い
+・INSERT ではなく INSERT INTO
+・文字列はシングルクォートでくくらなければならない。
+
+修正後
+
+INSERT INTO
+	product
+VALUES
+	(
+		'SB00000001',
+		'黒スタンプ',
+		1250
+	)
+;

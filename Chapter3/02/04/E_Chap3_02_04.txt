@@ -1,0 +1,41 @@
+演習問題SQL命令
+
+INSERT
+	employee
+		(
+			s_id
+			l_name
+			depart_id
+			last_update
+		)
+VALUE
+	(
+		'WA00001',
+		'和田',
+		'J01',
+		CURRENT_DATE
+	)
+;
+
+間違い
+・列名の指定はシングルクォートでくくらなければならない。
+・VALUE ではなく VALUES 。
+
+修正後
+
+INSERT
+	employee
+		(
+			s_id,
+			l_name,
+			depart_id,
+			last_update
+		)
+VALUES
+	(
+		'WA00001',
+		'和田',
+		'J01',
+		CURRENT_DATE
+	)
+;
