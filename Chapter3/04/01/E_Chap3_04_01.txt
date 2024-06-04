@@ -1,0 +1,7 @@
+UPDATE
+	books
+SET
+	isbn = CONCAT('ISBN', isbn),
+	/*0.95はその価格を税抜き価格(5%引き)にするための数*/
+	price = price * 0.95
+;

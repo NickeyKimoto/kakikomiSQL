@@ -1,0 +1,19 @@
+演習問題SQL命令
+
+UPDATE INTO
+	quest
+VALUES
+	sex = REPLACE(sex, '性', '')
+;
+
+間違い
+・UPDATE命令にINTOは必要ない。
+・列名の指定はVALUESではなくSET。
+
+修正後
+
+UPDATE
+	quest
+SET
+	sex = REPLACE(sex, '性', '')
+;
