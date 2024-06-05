@@ -1,0 +1,27 @@
+演習問題SQL命令
+
+UPDATE
+	rental
+SET
+	rental_date CURRENT_DATE
+WHERE
+		user_id = 'B200405'
+	OR
+		isbn = '4-0010-0000-1'
+;
+
+間違い
+・SET後の式に=がない。
+・二つの条件を満たすものであるにも関わらず、ANDではなくORになっている。
+
+修正後
+
+UPDATE
+	rental
+SET
+	rental_date = CURRENT_DATE
+WHERE
+		user_id = 'B200405'
+	AND
+		isbn = '4-0010-0000-1'
+;

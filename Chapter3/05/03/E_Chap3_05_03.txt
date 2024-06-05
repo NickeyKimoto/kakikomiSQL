@@ -1,0 +1,8 @@
+UPDATE
+	books
+SET
+	/*0.9は価格の10%オフを求める計算で利用する数*/
+	price = price * 0.9
+WHERE
+	publish = '日経BP'
+;
