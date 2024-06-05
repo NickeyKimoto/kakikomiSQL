@@ -1,0 +1,29 @@
+演習問題SQL命令
+
+CREATE INDEX
+	ind_usr
+IN
+	usr
+	(
+		prefecture
+		city
+		o_address
+	)
+;
+
+間違い
+・インデックス名の後はINではなくON
+・複合インデックスを作成しているのに、キーがカンマ区切りされていない
+
+修正後
+
+CREATE INDEX
+	ind_usr
+ON
+	usr
+	(
+		prefecture,
+		city,
+		o_address
+	)
+;
