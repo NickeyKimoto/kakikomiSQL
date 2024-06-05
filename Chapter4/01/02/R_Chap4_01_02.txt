@@ -1,0 +1,20 @@
+MariaDB [mydatabase]> CREATE TABLE
+    ->  order_desc
+    ->  (
+    ->          po_id INT NOT NULL,
+    ->          p_id CHAR(10) NOT NULL,
+    ->          quantity INT NULL,
+    ->          PRIMARY KEY(po_id, p_id)
+    ->  )
+    -> ;
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [mydatabase]> select * from order_desc;
+Empty set (0.001 sec)
+
+テーブル内容
+・テーブル名	order_desc
+・列名
+①po_id			商品コード
+②p_id			商品名
+③quantity		単価

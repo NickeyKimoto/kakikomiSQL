@@ -1,0 +1,26 @@
+MariaDB [mydatabase]> CREATE TABLE
+    ->  books
+    ->  (
+    ->          isbn CHAR(17) NOT NULL,
+    ->          title VARCHAR(255) NULL,
+    ->          price INT NULL,
+    ->          publish VARCHAR(30) NULL,
+    ->          publish_date DATE NULL,
+    ->          category_id CHAR(5) NULL,
+    ->          PRIMARY KEY(isbn)
+    ->  )
+    -> ;
+Query OK, 0 rows affected (0.019 sec)
+
+MariaDB [mydatabase]> select * from books;
+Empty set (0.001 sec)
+
+テーブル内容
+・テーブル名	books
+・列名
+①isbn			ISBNコード
+②title			書名
+③price			価格
+④publish		出版社
+⑤publish_date	刊行日
+⑥category_id	分類ID
