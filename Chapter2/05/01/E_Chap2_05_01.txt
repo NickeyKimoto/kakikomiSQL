@@ -4,8 +4,7 @@ SELECT
 FROM
 	quest
 WHERE
-	age
->
+	age >
 	(
 		SELECT
 			AVG(age)

@@ -1,0 +1,13 @@
+MariaDB [mydatabase]> CREATE TABLE
+    ->  author
+    ->  (
+    ->          author_id CHAR(5) PRIMARY KEY,
+    ->          name VARCHAR(30),
+    ->          name_kana VARCHAR(100),
+    ->          brith DATE
+    ->  )
+    -> ;
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [mydatabase]> select * from author;
+Empty set (0.001 sec)

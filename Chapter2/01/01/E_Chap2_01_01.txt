@@ -1,4 +1,5 @@
 SELECT
+	e.s_id,
 	CONCAT(e.l_name, e.f_name) AS 氏名,
 	t.work_time AS 勤務時間
 FROM
