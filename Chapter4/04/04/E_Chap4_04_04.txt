@@ -1,0 +1,19 @@
+演習問題SQL命令
+
+ALTER TABLE
+	access_log
+MODIFY WITH
+	referer, VARCHAR(200), NULL
+;
+
+間違い
+・MODIFYの後にWITHは不要
+・列名や列フラグはカンマ区切りではなく半角空白区切り
+
+修正後
+
+ALTER TABLE
+	access_log
+MODIFY
+	referer VARCHAR(200) NULL
+;

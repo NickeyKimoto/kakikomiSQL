@@ -1,0 +1,23 @@
+演習問題SQL命令
+
+ALTER TABLE
+	employee
+ADD TO
+	email VARCHAR(255) NOT NULL
+BEFORE
+	depart_id
+;
+
+間違い
+・ADDの後にTOは不要
+・後方に列を追加するときはBEFOREではなくAFTER
+
+修正後
+
+ALTER TABLE
+	employee
+ADD
+	email VARCHAR(255) NOT NULL
+AFTER
+	depart_id
+;
