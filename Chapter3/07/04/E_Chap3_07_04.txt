@@ -3,9 +3,9 @@
 DELETE
 	books
 WHERE
-		category_id = 'Z9999'
-	AND
-		category_id IS NULL
+	category_id = 'Z9999'
+AND
+	category_id IS NULL
 ;
 
 間違い
@@ -17,7 +17,7 @@ WHERE
 DELETE FROM
 	books
 WHERE
-		category_id = 'Z9999'
-	OR
-		category_id IS NULL
+	category_id = 'Z9999'
+OR
+	category_id IS NULL
 ;

@@ -1,8 +1,8 @@
 DELETE FROM
 	employee
 WHERE
-		/*1は退職済みを表す数*/
-		retired = 1
-	AND
-		last_update <= '2007-03-31'
+	/*1は退職済みを表す数*/
+	retired = 1
+AND
+	last_update <= '2007-03-31'
 ;
