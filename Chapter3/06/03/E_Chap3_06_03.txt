@@ -1,7 +1,9 @@
 UPDATE
 	books
 SET
-	title = CONCAT(title,
+	title = CONCAT
+	(
+		title,
 		(
 			SELECT
 				category_name
