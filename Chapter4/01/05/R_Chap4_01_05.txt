@@ -1,23 +1,9 @@
-MariaDB [mydatabase]> CREATE TABLE
-    ->  rental
-    ->  (
-    ->          id INT AUTO_INCREMENT PRIMARY KEY,
-    ->          user_id CHAR(7),
-    ->          isbn CHAR(13),
-    ->          rental_date DATE,
-    ->          returned SMALLINT DEFAULT 0
-    ->  )
-    -> ;
-Query OK, 0 rows affected (0.020 sec)
-
-MariaDB [mydatabase]> select * from rental;
-Empty set (0.001 sec)
-
-テーブル内容
-・テーブル名	rental
-・列名
-①id				貸し出しID
-②user_id		利用者コード
-③isbn			ISBNコード
-④rental_date	貸出日
-⑤returned		返却済みかどうか(1:返却済み|0:貸し出し中)。デフォルト0
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| id          | int(11)     | NO   | PRI | NULL    | auto_increment |
+| user_id     | char(7)     | YES  |     | NULL    |                |
+| isbn        | char(13)    | YES  |     | NULL    |                |
+| rental_date | date        | YES  |     | NULL    |                |
+| returned    | smallint(6) | YES  |     | 0       |                |
++-------------+-------------+------+-----+---------+----------------+
