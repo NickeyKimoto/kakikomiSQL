@@ -3,5 +3,5 @@ DELETE FROM
 WHERE
 	access_date < '2012-06-02'
 OR
-	referer = ''
+	referer IS NULL
 ;
